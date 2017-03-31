@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-
 #### OS:ubuntu 14.04
+
+cur_dir=`pwd`
+
+echo "#### 系统自带vim卸载"
+sudo apt-get remove --purge vim # (--purge 是完全删除，会连配置文件一起删除)
+sudo apt-get clean
 
 cd /usr/local/src/
 
@@ -38,3 +43,6 @@ make install
 
 # 添加vim软连接
 ln -s /usr/local/vim/bin/vim /usr/bin/vim
+
+# 切回初始目录
+cd ${cur_dir}
