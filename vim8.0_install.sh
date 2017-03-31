@@ -4,18 +4,18 @@
 cur_dir=`pwd`
 
 echo "#### 系统自带vim卸载"
-sudo apt-get remove --purge vim # (--purge 是完全删除，会连配置文件一起删除)
+sudo apt-get remove -y --purge vim # (--purge 是完全删除，会连配置文件一起删除)
 sudo apt-get clean
 
 cd /usr/local/src/
 
-# vim源码下载
+echo "#### vim源码下载"
 git clone https://github.com/vim/vim.git
 
-# vim源码压缩，暂存
+echo "#### vim源码压缩，暂存"
 tar -zcvf vim8.0.tgz vim
 
-# vim8.0编译安装
+echo "#### vim8.0编译安装"
 cd vim
 
 # ./configure --prefix=/usr/local/vim \                        # 指定将要安装到的路径
@@ -41,7 +41,7 @@ cd vim
 make
 make install
 
-# 添加vim软连接
+echo "#### 添加vim软连接"
 ln -s /usr/local/vim/bin/vim /usr/bin/vim
 
 # 切回初始目录
