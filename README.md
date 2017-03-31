@@ -3,4 +3,4 @@
 
 * 运行```install.sh```来安装vim插件
 * install.sh里会下载最新vim版本，并安装
-
+* test origint
