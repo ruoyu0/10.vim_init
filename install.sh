@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # OS: ubuntu 14.04
 
+echo "#### vim的卸载和重新安装"
+/bin/bash ./vim8.0_install.sh
+
 echo "#### 安装vim插件依赖的库"
 sudo apt-get install -y python-setuptools python-dev git cmake astyle ctags
 
@@ -39,6 +42,3 @@ echo "#### 使用vundle安装vim插件,请耐心等待"
 vim install -c "PluginInstall" -c "q" -c "q"
 
 echo "#### 安装完成"
-
-
-
