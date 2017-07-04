@@ -27,9 +27,10 @@ echo "#### vim 配色方案下载"
 # cd /tmp && rm -vrf molokai && git clone https://github.com/vim-cripts/molokai 
 # cp -vf ./molokai/colors/molokai.vim ~/.vim/colors/
 # rm -vrf molokai
+mkdir ~/.vim/colors
 
 # Solarized:
-cd /tmp && rm -vrf vim-colors-solarized && git clone git://github.com/altercation/vim-colors-solarized.git
+cd /tmp && rm -vrf vim-colors-solarized && git clone https://github.com/altercation/vim-colors-solarized.git
 cp -vf ./vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 rm -vrf vim-colors-solarized
 
